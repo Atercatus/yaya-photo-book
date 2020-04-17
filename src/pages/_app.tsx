@@ -6,10 +6,6 @@ export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
 
-    return (
-      <div>
-        <Component {...pageProps} />
-      </div>
-    );
+    return <Component {...pageProps} />;
   }
 }

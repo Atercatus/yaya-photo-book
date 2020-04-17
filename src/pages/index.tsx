@@ -1,5 +1,3 @@
-import Test from '../components/test';
+import Main from '../view/main';
 
-const Home = () => <Test />;
-
-export default Home;
+export default Main;

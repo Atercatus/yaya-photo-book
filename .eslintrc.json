@@ -29,6 +29,13 @@
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
     "indent": ["error", 2],
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": [
+      "error",
+      { "exceptions": ["App", "Document"] }
+    ],
+    /* eslint-disable react/jsx-one-expression-per-line */
+    "react/jsx-one-expression-per-line": "off"
   }
 }

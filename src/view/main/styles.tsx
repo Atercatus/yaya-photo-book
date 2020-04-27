@@ -1,8 +1,18 @@
 import styled from 'styled-components';
-import { DESKTOP_COLUMNS } from '../../common/constant';
+import {
+  WIDE_DESKTOP_COLUMNS,
+  WIDE_DESKTOP_CONTENT_PADDING_TOP,
+  PAGE_PADDING,
+  NARROW_DESKTOP_MAX_WIDTH,
+  NARROW_DESKTOP_CONTENT_PADDING_TOP,
+  TABLET_MAX_WIDTH,
+  TABLET_CONTENT_PADDING_TOP,
+  MOBILE_MAX_WIDTH,
+  MOBILE_CONTENT_PADDING_TOP,
+} from '../../common/constant';
 
 export const Subhead = styled.h4`
-  grid-column: span ${DESKTOP_COLUMNS};
+  grid-column: span ${WIDE_DESKTOP_COLUMNS};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,8 +25,23 @@ export const Subhead = styled.h4`
 
 export const Content = styled.div`
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 15.6rem 0 6rem 0;
+  padding: ${WIDE_DESKTOP_CONTENT_PADDING_TOP}rem ${PAGE_PADDING}rem 6rem
+    ${PAGE_PADDING}rem;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: ${10 * NARROW_DESKTOP_MAX_WIDTH}px) {
+    padding-top: ${NARROW_DESKTOP_CONTENT_PADDING_TOP}rem;
+  }
+
+  @media only screen and (max-width: ${10 * TABLET_MAX_WIDTH}px) {
+    padding-top: ${TABLET_CONTENT_PADDING_TOP}rem;
+  }
+
+  @media only screen and (max-width: ${10 * MOBILE_MAX_WIDTH}px) {
+    padding-top: ${MOBILE_CONTENT_PADDING_TOP}rem;
+  }
 `;

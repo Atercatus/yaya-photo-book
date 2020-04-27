@@ -1,7 +1,7 @@
 import * as S from './styles';
-import { PhotoCardProp } from './type/photo-card-prop';
+import { PhotoCardProps } from './type/photo-card-props';
 
-const PhotoCard = ({ source }: PhotoCardProp) => (
+const PhotoCard = ({ source }: PhotoCardProps) => (
   <S.PhotoCard>
     <S.Photo src={source} />
   </S.PhotoCard>

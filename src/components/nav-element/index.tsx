@@ -1,7 +1,7 @@
 import * as S from './styles';
-import { NavElementProp } from './types/nav-element-prop';
+import { NavElementProps } from './types/nav-element-props';
 
-const NavElement = ({ text, selected }: NavElementProp) => (
+const NavElement = ({ text, selected }: NavElementProps) => (
   <S.NavElement selected={!!selected}>
     <a href="#">{text}</a>
   </S.NavElement>

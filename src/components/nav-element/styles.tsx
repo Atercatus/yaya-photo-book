@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { NavElementStyleProp } from './types/nav-element-prop';
+import { NavElementStyleProps } from './types/nav-element-props';
 
-export const NavElement = styled.li<NavElementStyleProp>`
+export const NavElement = styled.li<NavElementStyleProps>`
   list-style-type: none;
   width: 10rem;
 

@@ -9,7 +9,7 @@ export const Layout = styled.div`
   flex-direction: column;
 `;
 
-export const Content = styled.div`
+export const Content = styled.main`
   width: 100%;
   height: 100%;
 `;

@@ -9,7 +9,7 @@ import {
   MOBILE_MAX_WIDTH,
 } from '../../common/constant';
 
-export const Header = styled.nav`
+export const Header = styled.header`
   grid-column: span ${WIDE_DESKTOP_COLUMNS};
   width: 100%;
   height: ${WIDE_DESKTOP_HEADER_HEIGHT}rem;
@@ -25,6 +25,7 @@ export const Header = styled.nav`
 export const GridContainer = styled.div`
   max-width: ${WIDE_DESKTOP_MAX_WIDTH}rem;
   width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(${WIDE_DESKTOP_COLUMNS}, 1fr);
   grid-gap: 2rem;
@@ -35,6 +36,7 @@ export const HeaderContent = styled.div`
   grid-column: span ${WIDE_DESKTOP_COLUMNS};
   display: flex;
   justify-content: space-between;
+  height: 100%;
 `;
 
 export const Logo = styled.a`
@@ -62,10 +64,14 @@ export const Logo = styled.a`
   }
 `;
 
-export const NavList = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
+export const NavList = styled.nav`
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+    margin: 0;
+  }
 `;

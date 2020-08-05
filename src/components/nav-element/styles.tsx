@@ -9,9 +9,12 @@ import {
 export const NavElement = styled.li<NavElementStyleProps>`
   list-style-type: none;
   width: 10rem;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 0;
 
   @media only screen and (max-width: ${10 * NARROW_DESKTOP_MAX_WIDTH}px) {
     width: 8rem;
@@ -26,14 +29,17 @@ export const NavElement = styled.li<NavElementStyleProps>`
   }
 
   a {
+    position: relative;
+    height: 100%;
     text-decoration: none;
     color: black;
     font-size: 1.3rem;
     font-weight: bold;
     line-height: 1.5rem;
     letter-spacing: 0.1em;
-    border-bottom: ${(props) => (props.selected ? '3px solid black' : 'none')};
-    padding: 0.7rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media only screen and (max-width: ${10 * NARROW_DESKTOP_MAX_WIDTH}px) {
       font-size: 1.15rem;
@@ -48,4 +54,12 @@ export const NavElement = styled.li<NavElementStyleProps>`
       font-size: 1rem;
     }
   }
+`;
+
+export const RadioBtn = styled.span`
+  width: 100%;
+  height: 0.4rem;
+  position: absolute;
+  bottom: 0;
+  background-color: black;
 `;
